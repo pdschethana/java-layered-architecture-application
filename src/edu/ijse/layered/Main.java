@@ -4,6 +4,9 @@
  */
 package edu.ijse.layered;
 
+import edu.ijse.layered.db.DBConnection;
+import java.sql.SQLException;
+
 /**
  *
  * @author USER
@@ -13,7 +16,8 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+        DBConnection.getInstance().getConnection();
         // TODO code application logic here
     }
     
